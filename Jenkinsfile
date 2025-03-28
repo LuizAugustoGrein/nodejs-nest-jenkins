@@ -6,22 +6,21 @@ pipeline {
                 checkout scm
             }
         }
-    }
-
-    stage('install') {
-        steps {
-            sh 'sudo apt install npm'
-            sh 'npm install'
+        stage('install') {
+            steps {
+                sh 'sudo apt install npm'
+                sh 'npm install'
+            }
         }
-    }
-    stage('build') {
-        steps {
-            sh 'run build'
+        stage('build') {
+            steps {
+                sh 'run build'
+            }
         }
-    }
-    stage('test') {
-        steps {
-            sh 'run test'
+        stage('test') {
+            steps {
+                sh 'run test'
+            }
         }
-    }
+    }    
 }
