@@ -27,7 +27,7 @@ pipeline {
             }
         }
         stage('docker push') {
-            steps: {
+            steps {
                 withCredentials([usernamePassword(credentialsId: 'docker_cred', passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]) {
                     sh 'docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD'
                     sh 'docker tag nodejs-nest:1.0 luizaugustogreinunc/nodejs-nest:1.0'
