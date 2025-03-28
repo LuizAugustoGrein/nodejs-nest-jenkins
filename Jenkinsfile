@@ -1,8 +1,7 @@
 pipeline {
     agent any
     environment {
-        PATH = "/usr/local/bin:$PATH"
-        PATH = "/Users/luizaugustogrein/.nvm/versions/node/v20.11.1/bin:$PATH"
+        PATH = "/usr/local/bin:$PATH:/Users/luizaugustogrein/.nvm/versions/node/v20.11.1/bin:$PATH"
     }
     stages {
         stage('checkout') {
