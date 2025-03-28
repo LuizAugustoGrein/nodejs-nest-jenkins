@@ -1,8 +1,8 @@
 version: '3'
 services:
   nestjs:
-    build: .
+    image: luizaugustogreinunc/nodejs-nest:1.0
+    restart: always
     ports:
       - "3000:3000"
-    environment:
-      - NODE_ENV=production
+    pull_policy: always
